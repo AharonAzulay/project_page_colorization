@@ -183,7 +183,7 @@
     <!--/ Abstract. -->
 
     <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
+    <!-- <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video explanation</h2>
         <div class="publication-video">
@@ -191,10 +191,35 @@
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
-    </div>
+    </div> -->
     <!--/ Paper video. -->
   </div>
 </section>
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+      <!-- pipeline. -->
+      <div class="column">
+        <h2 class="title is-3">Method</h2>
+        <div class="columns is-centered">
+          <div class="column content">
+            <p>
+              Overview. During training we encode the RGB and grayscale images into the latent space and feed the U-Net with a
+              random convex combination of the two, together with an auto generated caption of the color image, and the timestep 𝑡. At
+              inference time we encode the input grayscale image as and iteratively colorize it. Image credit: Unsplash © David Clode.
+            </p>
+            <img src="./static/images/Pipeline_v4-1.png" alt="text based colorization" style="max-width:100%; height:auto;">
+          </div>
+      
+        </div>
+      </div>
+    <!-- /pipeline. -->
   </div>
 </section>
 
@@ -221,32 +246,50 @@
   </div>
 </section>
 
+
 <section class="section">
   <div class="container is-max-desktop">
 
     <div class="columns is-centered">
-      <!-- Old photos. -->
+      <!-- Control by text. -->
+      <div class="column">
+        <div class="columns is-centered">
+          <div class="column content">
+            <img src="./static/images/textbased_car.png" alt="text based colorization" style="max-width:100%; height:auto;">
+          </div>
+      
+        </div>
+      </div>
+    <!-- /Control by text. -->
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
       <div class="column">
         <h2 class="title is-3">Colorizing old photos</h2>
-        <br>
-
         <div class="columns is-centered">
-          <!-- Image 1 -->
           <div class="column content">
-            <iframe frameborder="0" class="juxtapose" style="width: 100%; height: 540px;" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=ec71ee9a-97ae-11ee-9ddd-3f41531135b6"></iframe>
-            </div>
-      
-          <!-- Image 2
-          <div class="column content">
-            <iframe frameborder="0" class="juxtapose" style="width: 100%; height: 540px;" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=66de4822-97af-11ee-9ddd-3f41531135b6"></iframe>
-          </div> -->
-      
-          <!-- Image 3 -->
-          <div class="column content">
-            <iframe frameborder="0" class="juxtapose" style="width: 100%; height: 540px;" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=f5b14856-97af-11ee-9ddd-3f41531135b6"></iframe>
+            <iframe frameborder="0" class="juxtapose" style="width: 100%; height: 1000px;" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=ec71ee9a-97ae-11ee-9ddd-3f41531135b6"></iframe>
           </div>
         </div>
-    <!-- /Old photos. -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="columns is-centered">
+          <div class="column content">
+            <iframe frameborder="0" class="juxtapose" style="width: 100%; height: 1100px;" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=f5b14856-97af-11ee-9ddd-3f41531135b6"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -259,11 +302,34 @@
         <h2 class="title is-3">Enhancing existing colors in old photos</h2>
         <div class="columns is-centered">
           <div class="column content">
-            <iframe frameborder="0" class="juxtapose" style="width: 100%; height: 540px;" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=3d6c7b6a-97b1-11ee-9ddd-3f41531135b6"></iframe>
+            <iframe frameborder="0" class="juxtapose" style="width: 100%; height: 900px;" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=3d6c7b6a-97b1-11ee-9ddd-3f41531135b6"></iframe>
           </div>
         </div>
       </div>
     <!-- /Old photos. -->
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+      <!-- Ranker. -->
+      <div class="column">
+        <h2 class="title is-3">Automatically choosing color intensity</h2>
+        <div class="columns is-centered">
+          <div class="column content">
+            <p>
+              We can scale each cold diffusion step to control the color intensity. We visualized the effect of the latent color scaling of scales in range 0.6 to 1.4. Enclosed by a blue frame
+              is the most preferred scale, as predicted by a trained color ranker. We show in user study that people prefer colors that are in line with the prediction of our color ranker. Image credits: ‘Migrant Mother’ by Dorothea Lange.
+            </p>
+            <img src="./static/images/ranker.png" alt="ranker" style="max-width:100%; height:auto;">
+          </div>
+        </div>
+      </div>
+    <!-- /Ranker. -->
   </div>
 </section>
 <!-- 
@@ -283,28 +349,14 @@
 <footer class="footer">
   <div class="container">
     <div class="content has-text-centered">
-      <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
-        <i class="fas fa-file-pdf"></i>
-      </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
-        <i class="fab fa-github"></i>
-      </a>
     </div>
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
           <p>
-            This website is licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            This website is based on the <a href="https://nerfies.github.io/">Nerfies website template</a>, which is licensed under a
+            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
             Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-          <p>
-            This means you are free to borrow the <a
-              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
-            we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
           </p>
         </div>
       </div>
