@@ -79,13 +79,13 @@
             <span class="author-block"><a href="mailto:nir.zabari@mail.huji.ac.il">Nir Zabari</a><sup>1</sup>,</span>
             <span class="author-block"><a href="mailto:aharonchiko@gmail.com">Aharon Azulay</a><sup>1</sup>,</span>
             <span class="author-block"><a href="mailto:alexey.gorkor@gmail.com">Alexey Gorkor</a><sup>1</sup>,</span>
-            <span class="author-block"><a href="mailto:tavihalperin@gmail.com">Tavi Halperin</a><sup>1</sup>,</span>
-            <span class="author-block"><a href="mailto:ofried@runi.ac.il">Ohad Fried</a><sup>2</sup></span>
+            <span class="author-block"><a href="http://www.tavihalperin.me">Tavi Halperin</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="http://www.ohadf.com">Ohad Fried</a><sup>2</sup></span>
           </div>
 
           <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup>Lightricks,</span>
-            <span class="author-block"><sup>2</sup>Reichman University Herzliya</span>
+            <span class="author-block"><sup>2</sup>Reichman University</span>
           </div>
 
           <div class="column has-text-centered">
@@ -109,7 +109,7 @@
                   <span>arXiv</span>
                 </a>
               </span>
-              <!-- Video Link. -->
+              <!-- Video Link.
               <span class="link-block">
                 <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
                    class="external-link button is-normal is-rounded is-dark">
@@ -118,7 +118,7 @@
                   </span>
                   <span>Video</span>
                 </a>
-              </span>
+              </span> -->
             </div>
 
           </div>
@@ -210,9 +210,9 @@
         <div class="columns is-centered">
           <div class="column content">
             <p>
-              Overview. During training we encode the RGB and grayscale images into the latent space and feed the U-Net with a
+              During training we encode the RGB and grayscale images into the latent space and feed the U-Net with a
               random convex combination of the two, together with an auto generated caption of the color image, and the timestep 𝑡. At
-              inference time we encode the input grayscale image as and iteratively colorize it. Image credit: Unsplash © David Clode.
+              inference time we encode the input grayscale image and iteratively colorize it. Image credit: Unsplash © David Clode.
             </p>
             <img src="./static/images/Pipeline_v4-1.png" alt="text based colorization" style="max-width:100%; height:auto;">
           </div>
@@ -271,7 +271,7 @@
         <h2 class="title is-3">Colorizing old photos</h2>
         <div class="columns is-centered">
           <div class="column content">
-            <iframe frameborder="0" class="juxtapose" style="width: 100%; height: 1000px;" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=ec71ee9a-97ae-11ee-9ddd-3f41531135b6"></iframe>
+            <iframe frameborder="0" class="juxtapose" style="width: 100%; height: 1000px;" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=f5b14856-97af-11ee-9ddd-3f41531135b6"></iframe>
           </div>
         </div>
       </div>
@@ -279,19 +279,19 @@
   </div>
 </section>
 
-<section class="section">
+<!-- <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column">
         <div class="columns is-centered">
           <div class="column content">
-            <iframe frameborder="0" class="juxtapose" style="width: 100%; height: 1100px;" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=f5b14856-97af-11ee-9ddd-3f41531135b6"></iframe>
+            <iframe frameborder="0" class="juxtapose" style="width: 100%; height: 1100px;" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=ec71ee9a-97ae-11ee-9ddd-3f41531135b6"></iframe>
           </div>
         </div>
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -323,7 +323,7 @@
           <div class="column content">
             <p>
               We can scale each cold diffusion step to control the color intensity. We visualized the effect of the latent color scaling of scales in range 0.6 to 1.4. Enclosed by a blue frame
-              is the most preferred scale, as predicted by a trained color ranker. We show in user study that people prefer colors that are in line with the prediction of our color ranker. Image credits: ‘Migrant Mother’ by Dorothea Lange.
+              is the most preferred scale, as predicted by a trained color ranker. We show in a user study that people prefer colors that are in line with the prediction of our color ranker. Image credit: ‘Migrant Mother’ by Dorothea Lange.
             </p>
             <img src="./static/images/ranker.png" alt="ranker" style="max-width:100%; height:auto;">
           </div>
